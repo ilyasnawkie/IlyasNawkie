@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="theme-color" content="#211b17" />
+    <link rel="icon" href="data:," />
+    <title>Talking Ben — browser game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="game" aria-label="Игра">
+      <div id="loader" class="overlay"><span>Загрузка <b id="load-progress">0%</b></span></div>
+      <div id="stage" aria-live="polite"></div>
+      <button id="character-button" class="character-button" type="button" aria-label="Раздразнить персонажа">
+        <img src="assets/button.png" alt="" draggable="false" />
+      </button>
+      <div id="microphone-status" class="microphone-status" aria-live="polite">Микрофон выключен</div>
+      <p id="notice" class="notice" role="alert"></p>
+      <nav class="controls" aria-label="Управление">
+        <button id="phone-button" class="control" type="button" aria-label="Телефон"><img src="assets/phone.png" alt="" /></button>
+        <button id="mic-button" class="control" type="button" aria-label="Микрофон"><img src="assets/microphone.png" alt="" /></button>
+      </nav>
+    </main>
+    <!-- Version query prevents browsers from keeping an older game.js after an asset update. -->
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
+
